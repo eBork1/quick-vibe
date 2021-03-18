@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "quickvibe-8acec": {
+      "hosting": {
+        "app": [
+          "quickvibe-8acec"
+        ]
+      }
+    }
+  }
+}
