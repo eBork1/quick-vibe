@@ -6,6 +6,7 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
 
 @NgModule({
   declarations: [
+    // Components go here
     HeaderComponent
   ],
   imports: [
