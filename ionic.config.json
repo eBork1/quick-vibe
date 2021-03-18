@@ -1,0 +1,7 @@
+{
+  "name": "quickvibe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
