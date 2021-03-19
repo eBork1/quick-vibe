@@ -1,0 +1,64 @@
+<ion-content>
+  <ion-grid class="ion-align-items-center ion-justify-content-center ion-text-center">
+    <ion-row>
+      <ion-col>
+        <h2>Sign up</h2>
+        <ion-row>
+          <ion-col size-sm="12" size-md="8" size-lg="6" size-xl="4">
+            <ion-card>
+              <ion-card-content>
+                <ion-row>
+                  <ion-col size-sm="12" size-md="10">
+                    <form
+                      #registerForm="ngForm"
+                      novalidate>
+                      <div class="ion-padding">
+                        <ion-label>
+                          Username <ion-text color="danger" *ngIf="(registerForm.submitted && username.invalid) || username.invalid && (username.dirty || username.touched)">Oops! This is required.</ion-text>
+                        </ion-label>
+                        <ion-input 
+                          [(ngModel)]="user.username"
+                          name="username"
+                          #username="ngModel"
+                          type="text"
+                          required></ion-input>
+                      </div>
+                      <div class="ion-padding">
+                        <ion-label>
+                          Email <ion-text color="danger" *ngIf="(registerForm.submitted && email.invalid) || email.invalid && (email.dirty || email.touched)">Oops! This is required.</ion-text>
+                        </ion-label>
+                        <ion-input 
+                          [(ngModel)]="user.email"
+                          name="email"
+                          #email="ngModel"
+                          type="email"
+                          email
+                          required></ion-input>
+                      </div>
+                      <div class="ion-padding">
+                        <ion-label>
+                          Password <ion-text color="danger" *ngIf="(registerForm.submitted && password.invalid) || password.invalid && (password.dirty || password.touched)">Oops! This is required.</ion-text>
+                        </ion-label>
+                        <ion-input 
+                          [(ngModel)]="user.password"
+                          name="password"
+                          #password="ngModel"
+                          type="password"
+                          required></ion-input>
+                      </div>
+                      <div class="ion-padding">
+                        <!-- <ion-checkbox [color]="!user.tos.accepted && registerForm.submitted ? 'danger' : 'dark'" (click)="handleTos()"></ion-checkbox>  -->
+                        By creating this account, I agree to QuickVibe's <ion-text color="primary">Terms of Service</ion-text><br />
+                        <ion-button class="ion-margin-top" type="submit" color="warning" (click)="register(registerForm)">Create Account</ion-button>
+                      </div>
+                    </form>
+                  </ion-col>
+                </ion-row>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
