@@ -6,7 +6,8 @@ import { AppPage } from './app.page';
 const routes: Routes = [
   {
     path: '',
-    component: AppPage
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
     path: 'home',
