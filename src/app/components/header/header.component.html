@@ -1,5 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Header</ion-title>
+  <ion-toolbar class="ion-padding-horizontal">
+    <ion-title>QuickVibe</ion-title>
+    <ion-buttons class="auth-buttons" slot="end">
+      <ion-title color="warning" (click)="toLogin()">Login</ion-title>
+      <ion-title color="warning" (click)="toRegister()">Sign up</ion-title>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
