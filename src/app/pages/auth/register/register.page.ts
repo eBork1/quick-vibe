@@ -36,6 +36,7 @@ export class RegisterPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log(this.afAuth.auth.currentUser)
   }
 
   async register(form: NgForm) {
@@ -94,7 +95,7 @@ export class RegisterPage implements OnInit {
       });
 
       // vm.loadingController.dismiss();
-      this.router.navigate(['/app/home']);
+      this.router.navigate(['/auth/login']);
     } catch (e) {
       // vm.loadingController.dismiss();
       console.log('error add', e);
