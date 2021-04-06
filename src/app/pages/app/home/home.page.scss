@@ -1,0 +1,14 @@
+ion-content {
+  ion-grid {
+    max-width: 1200px;
+    padding: 0px;
+    .tabs {
+      ion-col {
+        background: var(--ion-color-tertiary);
+        border: 1px solid;
+        padding: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}

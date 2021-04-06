@@ -1,9 +1,29 @@
 <ion-header>
   <ion-toolbar class="ion-padding-horizontal">
-    <ion-title>QuickVibe</ion-title>
+    <ion-title slot="start">QuickVibe</ion-title>
+    <ion-buttons slot="start" class="nav ion-hide-xl-down">
+      <ion-row class="tabs ion-text-center">
+        <ion-col>
+          QuickVibe
+        </ion-col>
+        <ion-col size="3">
+          My Vibes
+        </ion-col>
+        <ion-col size="3">
+          Create a Vibe
+        </ion-col>
+        <ion-col size="3">
+          Saved
+        </ion-col>
+      </ion-row>
+    </ion-buttons>
     <ion-buttons class="auth-buttons" slot="end">
-      <ion-title color="warning" (click)="toLogin()">Login</ion-title>
-      <ion-title color="warning" (click)="toRegister()">Sign up</ion-title>
+      <ion-title *ngIf="userIsLoggedIn; else notLoggedIn" color="warning" (click)="logout()">Logout</ion-title>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<ng-template #notLoggedIn>
+  <ion-title color="warning" (click)="toLogin()">Login</ion-title>
+  <ion-title color="warning" (click)="toRegister()">Sign up</ion-title>
+</ng-template>

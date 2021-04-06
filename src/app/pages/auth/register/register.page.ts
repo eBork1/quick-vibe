@@ -35,9 +35,7 @@ export class RegisterPage implements OnInit {
     public router: Router
   ) { }
 
-  ngOnInit() {
-    console.log(this.afAuth.auth.currentUser)
-  }
+  ngOnInit() {}
 
   async register(form: NgForm) {
     let vm = this;

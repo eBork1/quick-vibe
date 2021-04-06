@@ -1,5 +1,12 @@
 ion-header {
   ion-toolbar {
+    .nav {
+      ion-row {
+        ion-col {
+          width: 200px !important;
+        }
+      }
+    }
     .auth-buttons {
       ion-title {
         font-size: 15px;
