@@ -1,6 +1,11 @@
 <app-header title="Home"></app-header>
 <ion-content>
   <ion-grid>
-    
+    <ion-row>
+      <ion-col>
+        <h1 *ngIf="!access_token" (click)="authorizeSpotifyUser()">Start</h1>
+        <!-- <h2 *ngIf="access_token" (click)="createPlaylist()">Create Playlist- (vibe goes here)</h2> -->
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-content>
